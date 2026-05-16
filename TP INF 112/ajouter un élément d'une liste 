@@ -169,7 +169,6 @@ int main()
             default:
                 printf("Choix invalide.\n");
         }
-
     } while (choix != 0);
 
     return 0;
