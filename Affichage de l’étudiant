@@ -1,0 +1,32 @@
+void ajouter() {
+    if (nombre >= MAX) {
+        printf("Liste pleine !\n");
+        return;
+    }
+
+    char mat[10];
+
+    printf("Matricule (ex: 25G2955) : ");
+    scanf("%s", mat);
+
+    
+    for (int i = 0; i < nombre; i++) {
+        if (strcmp(liste[i].matricule, mat) == 0) {
+            printf("Matricule deja existant !\n");
+            return;
+        }
+    }
+
+   
+    strcpy(liste[nombre].matricule, mat);
+
+    printf("Nom complet : ");
+    scanf(" %[^\n]", liste[nombre].nom);
+
+    printf("Age : ");
+    scanf("%d", &liste[nombre].age);
+
+    nombre++;
+
+    printf("Etudiant ajoute avec succes !\n");
+}
